@@ -9,7 +9,14 @@ let userChoice
 
 const handleClick = (e) => {
     userChoice = e.target.id
-    userChoiceDisplay.innerHTML = userChoice
+    userChoiceDisplay.innerHTML = "User choice: " + userChoice
+    generateComputerChoice()
+}
+
+//randomly generates computer choice, passes it through choices array to assign string
+const generateComputerChoice = () => {
+    const randomChoice = choices[Math.floor(Math.random() * choices.length)]
+    computerChoiceDisplay.innerHTML = "Computer choice: " + randomChoice
 }
 
 //add the buttons. not sure i understand what is going on here...
