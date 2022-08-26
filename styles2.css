@@ -23,7 +23,9 @@
     font-family: "JetBrains Mono",monospace;
 }
 
-
+h8{
+    color:#ecd0bf
+}
 
 /*not sure how to center align the buttons, have tried align items/self/content and even text-align*/
 button {
