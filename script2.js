@@ -2,7 +2,7 @@ const userChoiceDisplay = document.createElement("h1")
 const userScoreDisplay = document.createElement("h3")
 const computerChoiceDisplay = document.createElement("h1")
 const computerScoreDisplay = document.createElement("h3")
-const resultDisplay = document.createElement("h1")
+const resultDisplay = document.createElement("h4")
 const gameGrid = document.getElementById("game")
 gameGrid.append(userChoiceDisplay, userScoreDisplay, computerChoiceDisplay, computerScoreDisplay, resultDisplay)
 
@@ -11,6 +11,12 @@ let userChoice
 let computerChoice
 let userScore = 0
 let computerScore = 0
+
+userChoiceDisplay.classList.add('choice')
+computerChoiceDisplay.classList.add('choice')
+userScoreDisplay.classList.add('scores')
+computerScoreDisplay.classList.add('scores')
+resultDisplay.classList.add('result')
 
 //tell it what to do when user clicks buttons, call functions
 const handleClick = (e) => {
@@ -36,7 +42,6 @@ const generateComputerChoice = () => {
 }
 
 //add the buttons. not sure i understand what is going on here...
-//this should put buttons on my HTML but it didnt...
 for (let i = 0; i < choices.length; i++) {
     const button = document.createElement('button')
     button.id = choices[i] //can be delete f you want to use e.target.innerHTML in handleClick
@@ -72,7 +77,7 @@ const getResults = () => {
     }
     if (computerScore >= 5) {
         computerScoreDisplay.innerHTML = 'Computer score: 5'
-        resultDisplay.innerHTML = "You lost, game over! Reload the page to play again!"
+        resultDisplay.innerHTML = "You lost, game over! Reload the page to play again!" 
         disableButtons()
     }
 }

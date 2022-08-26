@@ -1,0 +1,64 @@
+
+
+.choice {
+    align-items: center;
+    appearance: none;
+    color: rgb(37, 152, 58);
+    font-family: "JetBrains Mono",monospace;
+}
+
+.scores {
+    color: blueviolet;
+    font-family: "JetBrains Mono",monospace;
+}
+
+.result {
+    color: rgb(102, 183, 154);
+    font-family: "JetBrains Mono",monospace;
+
+}
+
+button {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #58c975 0, #5a2a6e 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(66, 35, 62, 0.4) 0 2px 4px,rgba(35, 66, 56, 0.3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  button:focus {
+    box-shadow: #3ce05a 0 0 0 1.5px inset, rgba(35, 66, 54, 0.4) 0 2px 4px, rgba(35, 66, 42, 0.3) 0 7px 13px -3px, #3ce093 0 -3px 0 inset;
+  }
+  
+  button:hover {
+    box-shadow: rgba(90, 47, 98, 0.4) 0 4px 8px, rgba(115, 58, 113, 0.3) 0 7px 13px -3px, #5e2868 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    box-shadow: #e03cd8 0 3px 7px inset;
+    transform: translateY(2px);
+  }
