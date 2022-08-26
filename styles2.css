@@ -1,23 +1,31 @@
-
+.page-style {
+    background-color: #5a2a6e;
+    background-image: radial-gradient(100% 100% at 100% 0, #58c975 0, #5a2a6e 100%);
+}
 
 .choice {
     align-items: center;
+    text-align: center;
     appearance: none;
-    color: rgb(37, 152, 58);
+    color: rgb(99, 202, 118);
     font-family: "JetBrains Mono",monospace;
 }
 
 .scores {
-    color: blueviolet;
+    color: rgb(176, 191, 140);
+    text-align: center;
     font-family: "JetBrains Mono",monospace;
 }
 
 .result {
     color: rgb(102, 183, 154);
+    text-align: center;
     font-family: "JetBrains Mono",monospace;
-
 }
 
+
+
+/*not sure how to center align the buttons, have tried align items/self/content and even text-align*/
 button {
     align-items: center;
     appearance: none;
