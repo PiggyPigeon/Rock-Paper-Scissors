@@ -1,18 +1,26 @@
 const userChoiceDisplay = document.createElement("h1")
+const userScoreDisplay = document.createElement("h3")
 const computerChoiceDisplay = document.createElement("h1")
+const computerScoreDisplay = document.createElement("h3")
 const resultDisplay = document.createElement("h1")
 const gameGrid = document.getElementById("game")
-gameGrid.append(userChoiceDisplay, computerChoiceDisplay, resultDisplay)
-//h1 tags not showing in console :,-(
+gameGrid.append(userChoiceDisplay, userScoreDisplay, computerChoiceDisplay, computerScoreDisplay, resultDisplay)
+
 const choices = ['rock', 'paper', 'scissors']
 let userChoice
 let computerChoice
+let userScore = ''
+let computerScore = ''
 
+//tell it what to do when user clicks buttons, call functions
 const handleClick = (e) => {
     userChoice = e.target.id
-    userChoiceDisplay.innerHTML = "User choice: " + userChoice
-    generateComputerChoice()
     getResults()
+    userChoiceDisplay.innerHTML = "User choice: " + userChoice
+    userScoreDisplay.innerHTML = "User score: " + userScore
+    computerScoreDisplay.innerHTML = "Computer score: " + computerScore
+    generateComputerChoice()
+    
 }
 
 //randomly generates computer choice, passes it through choices array to assign string
@@ -33,16 +41,18 @@ for (let i = 0; i < choices.length; i++) {
 }
 
 const getResults = () => {
-    switch (userChoice + computer) {
+    switch (userChoice + computerChoice) {
         case 'scissorspaper':
         case 'rockscissors':
         case 'paperrock':
-            resultDisplay.innerHTML = "You win!"
+            resultDisplay.innerHTML = "You win! 1 point"
+            userScore = + 1
             break
         case 'paperscissors':
         case 'scissorsrock':
         case 'rockpaper':
-            resultDisplay.innerHTML = "You lose!"
+            resultDisplay.innerHTML = "You lose! Computer gets 1 point"
+            computerScore = + 1
             break
         case 'scissorsscissors':
         case 'rockrock':
