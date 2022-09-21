@@ -72,3 +72,24 @@ button {
     box-shadow: #e03cd8 0 3px 7px inset;
     transform: translateY(2px);
   }
+
+
+  .bottomBitContainer {
+    display: flex;
+    padding-top:5%
+    
+  }
+  
+  .bottomBit a {
+    text-decoration: none;
+    color: rgb(49, 220, 66);
+    border: solid #31074e 3px;
+    padding: 5px;
+    font-size: small;
+    width: 20%;
+  }
+  
+  .bottomBit:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(2px);
+  }
